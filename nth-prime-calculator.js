@@ -8,8 +8,9 @@ function getNthPrime(n) {
 	return primes[n - 1];
 }
 
-console.log('Wait for it...');
-
-console.time('Time it took');
-console.log('The ten millionth prime number is: ' + getNthPrime(10000000));
-console.timeEnd('Time it took');
+setTimeout(function(){
+	console.time('Time it took');
+	console.log('The millionth prime number is ' + getNthPrime(1000000));
+	console.timeEnd('Time it took');
+}, 0);
+console.log('Calculating millionth prime...');
